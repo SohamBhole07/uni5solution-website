@@ -44,12 +44,14 @@ This is a **static website** (plain HTML/CSS/JS — no database, no server-side 
 
 ---
 
-## Making the contact form actually send enquiries
-Right now the contact form is a **working front-end demo** — it validates input and shows a confirmation message, but it doesn't send an email yet (a static site has no server to process form submissions). Pick one:
+## Contact form — already wired up
+The contact form on `contact.html` submits to **FormSubmit.co**, pointed at `sp@uni5solution.in`. No account, API key or backend needed — but there's a **one-time activation step**:
 
-- **Formspree** or **Web3Forms** (easiest): free tier, no code — you get a form endpoint URL, and change one line in `contact.html` (the form's `action` attribute) to point to it. Submissions land in your inbox.
-- **Netlify Forms** (if you host on Netlify): add `netlify` as an attribute on the `<form>` tag and Netlify captures submissions automatically — no external service needed.
-- **Custom backend**: if you later want submissions to hit a CRM or database, this needs a small serverless function or backend — worth a separate small project once the site is live.
+1. The very first time someone submits the form, FormSubmit sends an email to `sp@uni5solution.in` titled something like "Please confirm your email".
+2. Open that email and click the confirmation link. From then on, every submission is forwarded straight to that inbox automatically — no further action needed.
+3. Until that link is clicked, submissions are silently held back (the visitor still sees a success message, so it's worth doing this activation step yourself with a test submission right after going live, rather than waiting for a real enquiry to reveal it).
+
+If you'd rather receive enquiries at a different address later, change the address in two places in `contact.html`: the form's `action="https://formsubmit.co/..."` attribute, and repeat the confirmation step for the new address.
 
 ---
 

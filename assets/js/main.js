@@ -125,8 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Generate heatmap nodes (coverage visualization signature element)
   document.querySelectorAll('.heatmap').forEach(map => {
     const seedBlobs = [
-      { top: '18%', left: '22%', size: 140, color: 'rgba(0,201,167,.55)' },
-      { top: '48%', left: '62%', size: 170, color: 'rgba(0,201,167,.35)' },
+      { top: '18%', left: '22%', size: 140, color: 'rgba(245,153,93,.55)' },
+      { top: '48%', left: '62%', size: 170, color: 'rgba(245,153,93,.35)' },
       { top: '72%', left: '30%', size: 120, color: 'rgba(255,138,61,.28)' },
     ];
     seedBlobs.forEach((b, i) => {
@@ -163,17 +163,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Contact form (static demo — see hosting guide for real submission handling)
+  // Contact form — submits to FormSubmit.co via AJAX so the page never navigates away.
+  // First-ever submission to a new destination address requires FormSubmit's one-time
+  // email confirmation (sent to that inbox) before it starts forwarding messages.
   const form = document.querySelector('#contact-form');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const note = document.querySelector('#form-note');
-      if (note) {
-        note.textContent = 'Thanks — this is a design preview. Connect a form backend (see the deployment guide) to receive live enquiries.';
-        note.style.color = '#00A889';
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalLabel = submitBtn ? submitBtn.textContent : '';
+
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+      if (note) { note.style.color = 'var(--slate)'; note.textContent = 'Sending your message…'; }
+
+      try {
+        const formData = new FormData(form);
+        const actionUrl = form.getAttribute('action').replace('formsubmit.co/', 'formsubmit.co/ajax/');
+        const response = await fetch(actionUrl, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          if (note) {
+            note.style.color = '#1E8E5A';
+            note.textContent = "Thanks — your message is on its way. We'll get back to you within one business day.";
+          }
+          form.reset();
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (err) {
+        if (note) {
+          note.style.color = '#C0392B';
+          note.textContent = "Something went wrong sending that. Please call us at 97680 16575 or email sp@uni5solution.in directly.";
+        }
+      } finally {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel; }
       }
-      form.reset();
     });
   }
 

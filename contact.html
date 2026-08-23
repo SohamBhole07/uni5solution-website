@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact uni5solution — Book a Free Wi-Fi Site Survey</title>
-<meta name="description" content="Get in touch with uni5solution for enterprise Wi-Fi and network infrastructure in Mumbai and Pune. Book a free site survey.">
+<title>Contact uni5solution — Get a Free Consultation | Pune</title>
+<meta name="description" content="Get in touch with uni5solution for IT, networking, security and electrical solutions in Mumbai and Pune. Call, email, or send an enquiry.">
 <link rel="icon" href="assets/img/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="brand">
-      <img src="assets/img/logo-mark.svg" alt="uni5solution">
+      <img src="assets/img/brand-icon.png" alt="uni5solution">
       <span class="brand-word">uni<b>5</b>solution</span>
     </a>
     <nav class="main-nav" id="main-nav">
@@ -25,20 +25,30 @@
       <a href="industries.html">Industries</a>
       <a href="work.html">Work</a>
       <a href="contact.html">Contact</a>
-      <a href="contact.html" class="btn btn-signal nav-inline-cta">Get a Free Site Survey</a>
+      <a href="contact.html" class="btn btn-signal nav-inline-cta">Get a Free Consultation</a>
     </nav>
     <div class="nav-cta">
-      <a href="contact.html" class="btn btn-signal">Get a Free Site Survey</a>
+      <a href="contact.html" class="btn btn-signal">Get a Free Consultation</a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
-<section class="page-hero">
+<section class="page-hero with-photo">
+  <div class="hero-photo"><img src="assets/img/photo-tower.jpg" alt="Communications tower against the sky"></div>
+  <div class="hero-scrim"></div>
+  <div class="particles">
+    <span class="particle" style="left:14%; animation-delay:.8s;"></span>
+    <span class="particle" style="left:31%; animation-delay:2.2s;"></span>
+    <span class="particle" style="left:48%; animation-delay:1.5s;"></span>
+    <span class="particle" style="left:65%; animation-delay:3.6s;"></span>
+    <span class="particle" style="left:82%; animation-delay:.4s;"></span>
+  </div>
   <div class="container">
+    <div class="network-badge live-badge-row"><span class="live-dot"></span>REPLY TIME: <b>WITHIN 1 BUSINESS DAY</b></div>
     <div class="eyebrow on-dark">CONTACT</div>
-    <h1>Let's map your coverage.</h1>
-    <p>Tell us about your space and we'll schedule a free Wi-Fi site survey — usually within a week, in Mumbai or Pune.</p>
+    <h1>Let's power and secure<br>your infrastructure.</h1>
+    <p>Call, email or send a message — we'll come back with a scoped proposal, not a sales pitch.</p>
   </div>
 </section>
 
@@ -47,8 +57,12 @@
     <div class="grid grid-2" style="gap:60px; align-items:flex-start;">
 
       <div class="card">
-        <div class="eyebrow">BOOK A FREE SITE SURVEY</div>
-        <form id="contact-form">
+        <div class="eyebrow">GET A FREE CONSULTATION</div>
+        <form id="contact-form" action="https://formsubmit.co/sp@uni5solution.in" method="POST">
+          <input type="hidden" name="_subject" value="New enquiry from uni5solution.in">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
           <div class="field-row">
             <div class="field">
               <label for="name">Full name</label>
@@ -70,18 +84,21 @@
             </div>
           </div>
           <div class="field">
-            <label for="city">Location</label>
-            <select id="city" name="city">
-              <option>Mumbai</option>
-              <option>Pune</option>
-              <option>Other</option>
+            <label for="service">What do you need?</label>
+            <select id="service" name="service">
+              <option>Internet Lease Line / Wi-Fi</option>
+              <option>CCTV / Surveillance</option>
+              <option>Firewall / Network Security</option>
+              <option>Electrical / UPS &amp; Power Backup</option>
+              <option>Tower Installation</option>
+              <option>Not sure — general enquiry</option>
             </select>
           </div>
           <div class="field">
-            <label for="message">Tell us about the space</label>
-            <textarea id="message" name="message" placeholder="Approx. floor area, number of floors, current Wi-Fi issues..."></textarea>
+            <label for="message">Tell us more</label>
+            <textarea id="message" name="message" placeholder="Location, site size, current setup, timeline..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Request Free Site Survey</button>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Enquiry</button>
           <p id="form-note" style="margin-top:14px; font-size:13px;"></p>
         </form>
       </div>
@@ -89,22 +106,22 @@
       <div>
         <div class="grid" style="gap:20px;">
           <div class="loc-card">
-            <div class="eyebrow">MUMBAI OFFICE</div>
-            <h3>Powai, Mumbai</h3>
-            <address>uni5solution Pvt. Ltd.<br>4th Floor, Hiranandani Business Park,<br>Powai, Mumbai – 400076, Maharashtra</address>
-            <a href="tel:+912262390500" class="more">+91 22 6239 0500 →</a>
+            <div class="eyebrow">HEAD OFFICE — PUNE</div>
+            <h3>Tathawade, Pune</h3>
+            <address>uni5solution<br>A-703, Elite Homes, Indira College Road,<br>Dattawadi, Tathawade, Pune – 411033, Maharashtra</address>
+            <a href="tel:+919768016575" class="more">97680 16575 →</a>
           </div>
           <div class="loc-card">
-            <div class="eyebrow">PUNE OFFICE</div>
-            <h3>Baner, Pune</h3>
-            <address>uni5solution Pvt. Ltd.<br>2nd Floor, Baner Business Hub,<br>Baner, Pune – 411045, Maharashtra</address>
-            <a href="tel:+912066090500" class="more">+91 20 6609 0500 →</a>
+            <div class="eyebrow">CALL US</div>
+            <h3>Two lines, always open</h3>
+            <address>97680 16575<br>92099 43044</address>
+            <a href="tel:+919768016575" class="more">Call now →</a>
           </div>
           <div class="loc-card">
-            <div class="eyebrow">GENERAL ENQUIRIES</div>
-            <h3>Email &amp; support</h3>
-            <address>Sales: hello@uni5solution.in<br>Support (managed clients): noc@uni5solution.in</address>
-            <a href="mailto:hello@uni5solution.in" class="more">Send an email →</a>
+            <div class="eyebrow">EMAIL</div>
+            <h3>Sales &amp; general enquiries</h3>
+            <address>sp@uni5solution.in<br>uni5solution@gmail.com</address>
+            <a href="mailto:sp@uni5solution.in" class="more">Send an email →</a>
           </div>
         </div>
       </div>
@@ -121,20 +138,20 @@
     </div>
     <div class="grid grid-2" style="gap:24px;">
       <div>
-        <h4 style="font-size:16px;">Is the site survey really free?</h4>
-        <p style="font-size:14.5px;">Yes, for locations in Mumbai and Pune. We survey first so any quote that follows is based on real measurements, not a floor-area estimate.</p>
+        <h4 style="font-size:16px;">Is the consultation really free?</h4>
+        <p style="font-size:14.5px;">Yes. We'll understand your site and requirement first, so any quote that follows is scoped to what you actually need.</p>
       </div>
       <div>
         <h4 style="font-size:16px;">How soon can you start?</h4>
-        <p style="font-size:14.5px;">Surveys are typically scheduled within 5–7 business days of enquiry, faster for urgent single-site requests.</p>
+        <p style="font-size:14.5px;">Installation typically begins within 3–5 business days of a confirmed purchase order, subject to feasibility.</p>
       </div>
       <div>
         <h4 style="font-size:16px;">Do you work outside Mumbai and Pune?</h4>
-        <p style="font-size:14.5px;">Our core coverage is Mumbai and Pune; for other Maharashtra locations, get in touch and we'll confirm feasibility.</p>
+        <p style="font-size:14.5px;">Our core coverage is Mumbai and Pune; for lease line and point-to-point connectivity we can provision at other locations across India — get in touch and we'll confirm feasibility.</p>
       </div>
       <div>
-        <h4 style="font-size:16px;">Can you take over an existing network?</h4>
-        <p style="font-size:14.5px;">Yes — a large share of our engagements start as a takeover and re-survey of an underperforming existing setup.</p>
+        <h4 style="font-size:16px;">Can you take over systems from another vendor?</h4>
+        <p style="font-size:14.5px;">Yes — many engagements start with us assessing and taking over networking, security or electrical systems installed by someone else.</p>
       </div>
     </div>
   </div>
@@ -145,16 +162,15 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand">
-          <img src="assets/img/logo-mark-light.svg" alt="uni5solution">
-          <span class="brand-word" style="color:#fff;">uni<b>5</b>solution</span>
+          <span class="footer-logo-chip"><img src="assets/img/logo-full.png" alt="Uni5Solution - For Connecting World"></span>
         </a>
-        <p>Enterprise Wi-Fi and network infrastructure — designed, deployed and managed across Mumbai and Pune.</p>
+        <p>One solution for all your IT, Networking &amp; Electrical needs — serving Mumbai and Pune for over 10 years.</p>
       </div>
       <div>
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About us</a></li>
-          <li><a href="work.html">Case studies</a></li>
+          <li><a href="work.html">Our work</a></li>
           <li><a href="industries.html">Industries</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -162,24 +178,25 @@
       <div>
         <h4>Solutions</h4>
         <ul>
-          <li><a href="services.html">Enterprise Wi-Fi</a></li>
-          <li><a href="services.html">Managed Wi-Fi &amp; NOC</a></li>
-          <li><a href="services.html">Guest Wi-Fi Portals</a></li>
-          <li><a href="services.html">Structured Cabling</a></li>
+          <li><a href="services.html#connectivity">Internet &amp; Wi-Fi</a></li>
+          <li><a href="services.html#security">CCTV &amp; Firewall Security</a></li>
+          <li><a href="services.html#electrical">Electrical &amp; Power</a></li>
+          <li><a href="services.html#infrastructure">Tower &amp; AMC Services</a></li>
         </ul>
       </div>
       <div>
         <h4>Get in touch</h4>
         <ul>
-          <li><a href="tel:+912262390500">+91 22 6239 0500</a></li>
-          <li><a href="mailto:hello@uni5solution.in">hello@uni5solution.in</a></li>
-          <li>Powai, Mumbai · Baner, Pune</li>
+          <li><a href="tel:+919768016575">97680 16575</a></li>
+          <li><a href="tel:+919209943044">92099 43044</a></li>
+          <li><a href="mailto:sp@uni5solution.in">sp@uni5solution.in</a></li>
+          <li>Tathawade, Pune</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 uni5solution. All rights reserved.</span>
-      <span>Site design &amp; build — draft v1</span>
+      <span>For Connecting World</span>
     </div>
   </div>
 </footer>
