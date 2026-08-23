@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>uni5solution — IT, Networking & Electrical Solutions | Mumbai & Pune</title>
-<meta name="description" content="uni5solution delivers complete IT, Networking & Electrical solutions — Internet lease lines, Wi-Fi, structured cabling, CCTV, firewalls, electrical & UPS, and tower installation across Mumbai and Pune.">
+<title>uni5solution — IT, Networking & Electrical Solutions | Pan-India</title>
+<meta name="description" content="uni5solution delivers complete IT, Networking & Electrical solutions — Internet lease lines, Wi-Fi, structured cabling, CCTV, firewalls, electrical & UPS, and tower installation, pan-India.">
 <link rel="icon" href="assets/img/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="eyebrow on-dark">MUMBAI · PUNE — ONE PARTNER FOR IT, NETWORK &amp; ELECTRICAL</div>
+        <div class="eyebrow on-dark">PAN-INDIA — ONE PARTNER FOR IT, NETWORK &amp; ELECTRICAL</div>
         <h1>One solution for<br>all your IT, Networking<br>&amp; Electrical needs.</h1>
         <p class="lede">From internet lease lines and Wi-Fi to structured cabling, CCTV, firewalls, electrical installations and power backup — we design, deploy and maintain the infrastructure your business runs on.</p>
         <div class="hero-actions">
@@ -49,11 +49,12 @@
         <div class="hero-stats">
           <div><strong>10+</strong><span>YEARS IN BUSINESS</span></div>
           <div><strong>99.5%</strong><span>NETWORK AVAILABILITY</span></div>
-          <div><strong>2</strong><span>CITIES — MUMBAI &amp; PUNE</span></div>
+          <div><strong>PAN</strong><span>INDIA SERVICE COVERAGE</span></div>
           <div><strong>24/7</strong><span>SUPPORT &amp; HELPDESK</span></div>
         </div>
       </div>
-      <div class="network-live" role="img" aria-label="Animated illustration of connected IT, security and electrical infrastructure around a central building">
+      <div class="hero-visual">
+        <div class="network-live" role="img" aria-label="Animated illustration of connected IT, security and electrical infrastructure around a central building">
         <div class="heatmap-grid"></div>
 
         <div class="network-badge"><span class="live-dot"></span>SYSTEMS STATUS: <b>ALL ONLINE</b></div>
@@ -89,37 +90,48 @@
           <circle class="packet" r="3" style="offset-path:path('M460,270 Q425,300 370,330'); animation-duration:2.4s; animation-delay:.15s;"/>
           <circle class="packet" r="3" style="offset-path:path('M460,430 Q425,380 370,330'); animation-duration:3.2s; animation-delay:.8s;"/>
 
-          <!-- node 1: Wi-Fi / connectivity -->
-          <g>
+          <!-- node 1: Wi-Fi / connectivity (interactive, active by default) -->
+          <g class="hero-node active" data-service="wifi" tabindex="0" role="button" aria-label="View Wi-Fi and networking services">
             <circle class="radar" cx="260" cy="140" r="8"/>
             <circle class="radar d2" cx="260" cy="140" r="8"/>
             <line class="ap-antenna" x1="260" y1="132" x2="260" y2="120"/>
             <circle class="ap-core" cx="260" cy="120" r="2"/>
             <circle class="ap-core" cx="260" cy="140" r="6"/>
+            <circle class="hit-area" cx="260" cy="140" r="26"/>
           </g>
-          <!-- node 2: CCTV / security -->
-          <g>
+          <!-- node 2: CCTV / security (interactive) -->
+          <g class="hero-node" data-service="cctv" tabindex="0" role="button" aria-label="View CCTV and security services">
             <circle class="radar" cx="150" cy="330" r="8"/>
             <circle class="radar d2" cx="150" cy="330" r="8"/>
             <rect x="141" y="322" width="18" height="10" rx="2" fill="none" stroke="#DCE9E6" stroke-width="1.4"/>
             <circle cx="153" cy="327" r="2.6" fill="none" stroke="#DCE9E6" stroke-width="1.2"/>
             <circle class="ap-core" cx="150" cy="330" r="6"/>
+            <circle class="hit-area" cx="150" cy="330" r="26"/>
           </g>
-          <!-- node 3: Electrical / power -->
-          <g>
+          <!-- node 3: Electrical / power (interactive) -->
+          <g class="hero-node" data-service="electrical" tabindex="0" role="button" aria-label="View electrical and power services">
             <circle class="radar" cx="370" cy="330" r="8"/>
             <circle class="radar d2" cx="370" cy="330" r="8"/>
             <polygon points="372,318 364,331 369,331 366,342 376,327 371,327" fill="#DCE9E6"/>
             <circle class="ap-core" cx="370" cy="330" r="6"/>
+            <circle class="hit-area" cx="370" cy="330" r="26"/>
           </g>
         </svg>
 
         <div class="network-readout">
-          <div><span>SITES MONITORED</span><strong id="live-devices">46</strong></div>
-          <div><span>AVG RESPONSE</span><strong id="live-latency">18m</strong></div>
+          <div><span id="stat1-label">SITES MONITORED</span><strong id="live-devices">46</strong></div>
+          <div><span id="stat2-label">AVG RESPONSE</span><strong id="live-latency">18m</strong></div>
+        </div>
+        </div>
+
+        <div class="hero-caption" id="hero-caption">
+          <strong id="hero-caption-title">Wi-Fi &amp; Networking</strong>
+          <span id="hero-caption-text">Enterprise Wi-Fi, lease line and structured cabling, designed around your building.</span>
+          <a href="services.html#connectivity" id="hero-caption-link" class="more">Learn more →</a>
         </div>
       </div>
     </div>
+    <p class="hero-hint">↑ Tap a node — Wi-Fi, CCTV or power — to see what we do there.</p>
   </div>
 </section>
 
@@ -225,7 +237,7 @@
 <section class="section">
   <div class="container">
     <div class="grid grid-4">
-      <div class="stat reveal"><strong>10+</strong><span>YEARS SERVING MUMBAI &amp; PUNE</span></div>
+      <div class="stat reveal"><strong>10+</strong><span>YEARS IN BUSINESS, PAN-INDIA</span></div>
       <div class="stat reveal"><strong>99.5%</strong><span>NETWORK AVAILABILITY (SLA)</span></div>
       <div class="stat reveal"><strong>&lt;4 hrs</strong><span>MAXIMUM TIME TO RESOLVE (MTTR)</span></div>
       <div class="stat reveal"><strong>24/7</strong><span>HELPDESK &amp; TECHNICAL SUPPORT</span></div>
@@ -238,7 +250,7 @@
   <div class="container">
     <div class="quote reveal">
       <p>"uni5solution set up our lease line, Wi-Fi and CCTV in one project — one team, one invoice, one number to call when something needs attention. That alone made it worth switching."</p>
-      <cite>— Facility Manager, corporate client, Pune</cite>
+      <cite>— Facility Manager, corporate client</cite>
     </div>
   </div>
 </section>
@@ -263,7 +275,7 @@
         <a href="index.html" class="brand">
           <span class="footer-logo-chip"><img src="assets/img/logo-full.png" alt="Uni5Solution - For Connecting World"></span>
         </a>
-        <p>One solution for all your IT, Networking &amp; Electrical needs — serving Mumbai and Pune for over 10 years.</p>
+        <p>One solution for all your IT, Networking &amp; Electrical needs — serving businesses pan-India for over 10 years.</p>
       </div>
       <div>
         <h4>Company</h4>
@@ -289,7 +301,6 @@
           <li><a href="tel:+919768016575">97680 16575</a></li>
           <li><a href="tel:+919209943044">92099 43044</a></li>
           <li><a href="mailto:sp@uni5solution.in">sp@uni5solution.in</a></li>
-          <li>Tathawade, Pune · Mumbai</li>
         </ul>
       </div>
     </div>

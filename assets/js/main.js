@@ -94,15 +94,85 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Hero network readout — small live-feeling number fluctuation
-  if (!prefersReducedMotion) {
+  // Interactive hero — click/tap a node (Wi-Fi, CCTV, Electrical) to explore that service.
+  // A single fluctuation interval keeps whichever service is active feeling "live".
+  const heroNodes = document.querySelectorAll('.hero-node');
+  if (heroNodes.length) {
+    const serviceInfo = {
+      wifi: {
+        title: 'Wi-Fi & Networking',
+        text: 'Enterprise Wi-Fi, lease line and structured cabling, designed around your building.',
+        link: 'services.html#connectivity',
+        stat1: { label: 'SITES MONITORED', base: 46, suffix: '', jitter: 6 },
+        stat2: { label: 'AVG RESPONSE', base: 18, suffix: 'm', jitter: 4 }
+      },
+      cctv: {
+        title: 'CCTV & Surveillance',
+        text: 'Camera supply, installation and centralized monitoring, backed by firewall-protected network security.',
+        link: 'services.html#security',
+        stat1: { label: 'CAMERAS DEPLOYED', base: 600, suffix: '+', jitter: 15 },
+        stat2: { label: 'AVG RESPONSE', base: 22, suffix: 'm', jitter: 4 }
+      },
+      electrical: {
+        title: 'Electrical & Power',
+        text: 'Electrical installation, maintenance and UPS backup that keeps critical systems running.',
+        link: 'services.html#electrical',
+        stat1: { label: 'UPS SYSTEMS LIVE', base: 180, suffix: '+', jitter: 8 },
+        stat2: { label: 'AVG UPTIME', base: 99.5, suffix: '%', jitter: 0.3, decimals: 1 }
+      }
+    };
+
+    const titleEl = document.querySelector('#hero-caption-title');
+    const textEl = document.querySelector('#hero-caption-text');
+    const linkEl = document.querySelector('#hero-caption-link');
+    const stat1LabelEl = document.querySelector('#stat1-label');
+    const stat2LabelEl = document.querySelector('#stat2-label');
     const devicesEl = document.querySelector('#live-devices');
     const latencyEl = document.querySelector('#live-latency');
-    if (devicesEl && latencyEl) {
-      setInterval(() => {
-        devicesEl.textContent = (118 + Math.floor(Math.random() * 18)).toString();
-        latencyEl.textContent = (8 + Math.floor(Math.random() * 7)) + 'ms';
-      }, 2400);
+
+    let currentService = 'wifi';
+
+    const renderStats = () => {
+      const info = serviceInfo[currentService];
+      if (!info || !devicesEl || !latencyEl) return;
+      const jitterVal = (stat, decimals) => {
+        const v = stat.base + (Math.random() * 2 - 1) * stat.jitter;
+        return decimals ? v.toFixed(decimals) : Math.round(v);
+      };
+      devicesEl.textContent = jitterVal(info.stat1, info.stat1.decimals) + info.stat1.suffix;
+      latencyEl.textContent = jitterVal(info.stat2, info.stat2.decimals) + info.stat2.suffix;
+    };
+
+    const activateNode = (node) => {
+      const service = node.getAttribute('data-service');
+      const info = serviceInfo[service];
+      if (!info) return;
+      currentService = service;
+
+      heroNodes.forEach(n => n.classList.remove('active'));
+      node.classList.add('active');
+
+      if (titleEl) titleEl.textContent = info.title;
+      if (textEl) textEl.textContent = info.text;
+      if (linkEl) linkEl.setAttribute('href', info.link);
+      if (stat1LabelEl) stat1LabelEl.textContent = info.stat1.label;
+      if (stat2LabelEl) stat2LabelEl.textContent = info.stat2.label;
+      renderStats();
+    };
+
+    heroNodes.forEach(node => {
+      node.addEventListener('click', () => activateNode(node));
+      node.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          activateNode(node);
+        }
+      });
+    });
+
+    renderStats();
+    if (!prefersReducedMotion) {
+      setInterval(renderStats, 2400);
     }
   }
 

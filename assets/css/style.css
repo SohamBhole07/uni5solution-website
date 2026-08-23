@@ -334,6 +334,34 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .network-svg .building{ fill:#16233F; stroke:rgba(255,255,255,.14); }
 .network-svg .floor-line{ stroke:rgba(255,255,255,.08); }
 
+/* interactive hero nodes */
+.hero-node{ cursor:pointer; }
+.hero-node .hit-area{ fill:transparent; pointer-events:all; }
+.hero-node:not(.active){ opacity:.48; transition:opacity .3s ease; }
+.hero-node.active{ opacity:1; transition:opacity .3s ease; }
+.hero-node.active .radar{ stroke:#fff; }
+.hero-node:hover:not(.active){ opacity:.75; }
+.hero-node:focus{ outline:none; }
+.hero-node:focus-visible .ap-core{ filter:drop-shadow(0 0 5px #fff); }
+
+.hero-caption{
+  margin-top:16px;
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--line-dark); border-radius:12px; padding:16px 18px;
+  display:flex; flex-direction:column; gap:4px;
+  min-height:88px;
+}
+.js-reveal .hero-caption{ animation:caption-fade .35s ease; }
+.hero-caption strong{ font-family:var(--font-display); font-size:15px; color:#fff; }
+.hero-caption span{ font-size:12.5px; color:#B7C1D1; line-height:1.4; }
+.hero-caption a.more{ font-size:11.5px; color:var(--signal); border-bottom:1px solid var(--signal); align-self:flex-start; margin-top:2px; padding-bottom:0; }
+@keyframes caption-fade{ from{ opacity:0; transform:translateY(6px); } to{ opacity:1; transform:translateY(0); } }
+
+.hero-hint{
+  margin:20px 0 0; text-align:center;
+  font-family:var(--font-mono); font-size:12px; color:#8695AB;
+}
+
 .network-badge{
   position:absolute; top:18px; left:18px; z-index:3;
   display:flex; align-items:center; gap:8px;
