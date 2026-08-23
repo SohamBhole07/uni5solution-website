@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>uni5solution — Enterprise Wi-Fi & Network Infrastructure | Mumbai & Pune</title>
+<meta name="description" content="uni5solution designs, deploys and manages enterprise Wi-Fi networks for offices, hospitality, retail and campuses across Mumbai and Pune. Free site survey.">
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.svg" alt="uni5solution">
+      <span class="brand-word">uni<b>5</b>solution</span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-signal nav-inline-cta">Get a Free Site Survey</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-signal">Get a Free Site Survey</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow on-dark">MUMBAI · PUNE — ENTERPRISE WI-FI PARTNER</div>
+        <h1>Wi-Fi that holds up<br>at full capacity.</h1>
+        <p class="lede">We design, deploy and manage enterprise wireless networks for offices, hotels, hospitals, campuses and retail chains — engineered on real site surveys, not guesswork.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-signal">Book a Free Site Survey</a>
+          <a href="services.html" class="btn btn-ghost">See what we build →</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>240+</strong><span>NETWORKS DEPLOYED</span></div>
+          <div><strong>99.9%</strong><span>AVG. UPTIME SLA</span></div>
+          <div><strong>2</strong><span>CITIES — MUMBAI &amp; PUNE</span></div>
+          <div><strong>24/7</strong><span>NOC MONITORING</span></div>
+        </div>
+      </div>
+      <div class="network-live" role="img" aria-label="Animated illustration of an office building with three access points serving connected devices">
+        <div class="heatmap-grid"></div>
+
+        <div class="network-badge"><span class="live-dot"></span>NETWORK STATUS: <b>ONLINE</b></div>
+
+        <svg class="network-svg" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+          <!-- building -->
+          <rect class="building" x="210" y="190" width="100" height="150" rx="8" stroke-width="1.5"/>
+          <line class="floor-line" x1="210" y1="225" x2="310" y2="225"/>
+          <line class="floor-line" x1="210" y1="260" x2="310" y2="260"/>
+          <line class="floor-line" x1="210" y1="295" x2="310" y2="295"/>
+
+          <!-- connection links (device -> nearest AP) -->
+          <path class="link" d="M70,90 Q160,80 260,140"/>
+          <path class="link" d="M450,90 Q360,80 260,140"/>
+          <path class="link" d="M60,270 Q95,300 150,330"/>
+          <path class="link" d="M60,430 Q95,380 150,330"/>
+          <path class="link" d="M460,270 Q425,300 370,330"/>
+          <path class="link" d="M460,430 Q425,380 370,330"/>
+
+          <!-- device dots -->
+          <circle class="device-dot pulse" cx="70" cy="90" r="5"/>
+          <circle class="device-dot pulse" cx="450" cy="90" r="5"/>
+          <circle class="device-dot pulse" cx="60" cy="270" r="5"/>
+          <circle class="device-dot pulse" cx="60" cy="430" r="5"/>
+          <circle class="device-dot pulse" cx="460" cy="270" r="5"/>
+          <circle class="device-dot pulse" cx="460" cy="430" r="5"/>
+
+          <!-- travelling packets, one per link -->
+          <circle class="packet" r="3" style="offset-path:path('M70,90 Q160,80 260,140'); animation-duration:2.6s; animation-delay:0s;"/>
+          <circle class="packet" r="3" style="offset-path:path('M450,90 Q360,80 260,140'); animation-duration:3s; animation-delay:.6s;"/>
+          <circle class="packet" r="3" style="offset-path:path('M60,270 Q95,300 150,330'); animation-duration:2.2s; animation-delay:.3s;"/>
+          <circle class="packet" r="3" style="offset-path:path('M60,430 Q95,380 150,330'); animation-duration:2.8s; animation-delay:1s;"/>
+          <circle class="packet" r="3" style="offset-path:path('M460,270 Q425,300 370,330'); animation-duration:2.4s; animation-delay:.15s;"/>
+          <circle class="packet" r="3" style="offset-path:path('M460,430 Q425,380 370,330'); animation-duration:3.2s; animation-delay:.8s;"/>
+
+          <!-- access points: radar rings + antenna + core -->
+          <g>
+            <circle class="radar" cx="260" cy="140" r="8"/>
+            <circle class="radar d2" cx="260" cy="140" r="8"/>
+            <line class="ap-antenna" x1="260" y1="132" x2="260" y2="120"/>
+            <circle class="ap-core" cx="260" cy="120" r="2"/>
+            <circle class="ap-core" cx="260" cy="140" r="6"/>
+          </g>
+          <g>
+            <circle class="radar" cx="150" cy="330" r="8"/>
+            <circle class="radar d2" cx="150" cy="330" r="8"/>
+            <line class="ap-antenna" x1="150" y1="322" x2="150" y2="310"/>
+            <circle class="ap-core" cx="150" cy="310" r="2"/>
+            <circle class="ap-core" cx="150" cy="330" r="6"/>
+          </g>
+          <g>
+            <circle class="radar" cx="370" cy="330" r="8"/>
+            <circle class="radar d2" cx="370" cy="330" r="8"/>
+            <line class="ap-antenna" x1="370" y1="322" x2="370" y2="310"/>
+            <circle class="ap-core" cx="370" cy="310" r="2"/>
+            <circle class="ap-core" cx="370" cy="330" r="6"/>
+          </g>
+        </svg>
+
+        <div class="network-readout">
+          <div><span>DEVICES CONNECTED</span><strong id="live-devices">124</strong></div>
+          <div><span>AVG LATENCY</span><strong id="live-latency">11ms</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO STRIP -->
+<section class="section-tight">
+  <div class="container">
+    <p class="badge-signal" style="margin-bottom:20px;">TRUSTED ACROSS SECTORS WE SERVE</p>
+    <div class="strip">
+      <span>Corporate Offices</span>
+      <span>Hospitality &amp; Hotels</span>
+      <span>Retail &amp; Malls</span>
+      <span>Healthcare</span>
+      <span>Education Campuses</span>
+      <span>Co-working Spaces</span>
+      <span>Warehousing &amp; Manufacturing</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">WHAT WE BUILD</div>
+      <h2>Six services, one network<br>you stop thinking about.</h2>
+      <p>Every engagement starts with a site survey and ends with a network your IT team can hand off — or one we keep managing.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal">
+        <div class="bars"><i></i><i></i><i></i><i></i></div>
+        <h3>Enterprise Wi-Fi Design &amp; Deployment</h3>
+        <p>Access point placement, capacity planning and RF design based on your actual floor plan and device density — not a generic router drop.</p>
+        <a href="services.html" class="more">Learn more →</a>
+      </div>
+      <div class="card reveal">
+        <div class="bars"><i></i><i></i><i></i><i></i></div>
+        <h3>Managed Wi-Fi &amp; NOC Support</h3>
+        <p>24/7 monitoring, proactive alerts and a support desk that fixes issues before your team notices them.</p>
+        <a href="services.html" class="more">Learn more →</a>
+      </div>
+      <div class="card reveal">
+        <div class="bars"><i></i><i></i><i></i><i></i></div>
+        <h3>Guest &amp; Branded Wi-Fi Portals</h3>
+        <p>Custom captive portals, social login and bandwidth controls for hotels, malls and hospitality venues.</p>
+        <a href="services.html" class="more">Learn more →</a>
+      </div>
+      <div class="card reveal">
+        <div class="bars"><i></i><i></i><i></i><i></i></div>
+        <h3>Structured Cabling &amp; LAN</h3>
+        <p>Cat6/6A cabling, racks and switching that back your wireless network with a wired foundation built to last.</p>
+        <a href="services.html" class="more">Learn more →</a>
+      </div>
+      <div class="card reveal">
+        <div class="bars"><i></i><i></i><i></i><i></i></div>
+        <h3>Wi-Fi Site Survey &amp; Heatmapping</h3>
+        <p>Predictive and on-site surveys that map coverage, interference and dead zones before a single AP is mounted.</p>
+        <a href="services.html" class="more">Learn more →</a>
+      </div>
+      <div class="card reveal">
+        <div class="bars"><i></i><i></i><i></i><i></i></div>
+        <h3>Network Security &amp; Access Control</h3>
+        <p>WPA3, VLAN segmentation, RADIUS authentication and firewalling to keep guest and corporate traffic apart.</p>
+        <a href="services.html" class="more">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US / PROCESS -->
+<section class="section on-dark blueprint">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">HOW WE WORK</div>
+      <h2>Four steps. No surprises<br>on the invoice or the network.</h2>
+    </div>
+    <div class="process">
+      <div class="process-step reveal">
+        <span class="num">01 — SURVEY</span>
+        <h4>We walk the site</h4>
+        <p>RF survey across every floor, noting building materials, device density and dead zones.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="num">02 — DESIGN</span>
+        <h4>We map the coverage</h4>
+        <p>A heatmapped AP layout and bill of materials, reviewed with you before anything is ordered.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="num">03 — DEPLOY</span>
+        <h4>We install and tune</h4>
+        <p>Cabling, mounting, configuration and load testing — with minimal disruption to your operations.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="num">04 — MANAGE</span>
+        <h4>We keep watching</h4>
+        <p>Optional 24/7 NOC monitoring, firmware management and a direct line when something needs attention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS / CREDIBILITY -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="stat reveal"><strong>18 min</strong><span>AVG. TICKET RESPONSE TIME</span></div>
+      <div class="stat reveal"><strong>1,200+</strong><span>ACCESS POINTS UNDER MANAGEMENT</span></div>
+      <div class="stat reveal"><strong>11 yrs</strong><span>COMBINED FIELD ENGINEERING EXPERIENCE</span></div>
+      <div class="stat reveal"><strong>4.8/5</strong><span>AVERAGE CLIENT SATISFACTION</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section-tight">
+  <div class="container">
+    <div class="quote reveal">
+      <p>"Uni5solution re-surveyed our Powai office after two failed vendor attempts. The heatmap showed exactly where our old network was falling short — coverage complaints stopped within a week of the new deployment."</p>
+      <cite>— IT Head, business-park tenant, Mumbai</cite>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-tight">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Not sure where your dead zones are?</h2>
+        <p>Book a free on-site Wi-Fi survey for your Mumbai or Pune location — no obligation, just a coverage map.</p>
+      </div>
+      <a href="contact.html" class="btn btn-signal">Book a Free Site Survey</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img src="assets/img/logo-mark-light.svg" alt="uni5solution">
+          <span class="brand-word" style="color:#fff;">uni<b>5</b>solution</span>
+        </a>
+        <p>Enterprise Wi-Fi and network infrastructure — designed, deployed and managed across Mumbai and Pune.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="work.html">Case studies</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="services.html">Enterprise Wi-Fi</a></li>
+          <li><a href="services.html">Managed Wi-Fi &amp; NOC</a></li>
+          <li><a href="services.html">Guest Wi-Fi Portals</a></li>
+          <li><a href="services.html">Structured Cabling</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+912262390500">+91 22 6239 0500</a></li>
+          <li><a href="mailto:hello@uni5solution.in">hello@uni5solution.in</a></li>
+          <li>Powai, Mumbai · Baner, Pune</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 uni5solution. All rights reserved.</span>
+      <span>Site design &amp; build — draft v1</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

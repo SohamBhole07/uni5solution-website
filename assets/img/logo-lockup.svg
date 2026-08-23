@@ -1,0 +1,21 @@
+<svg viewBox="0 0 620 170" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .stroke { fill: none; stroke: #0B1F3A; stroke-width: 22; stroke-linecap: round; }
+      .arc { fill: none; stroke: #00C9A7; stroke-width: 13; stroke-linecap: round; }
+      .dot { fill: #00C9A7; }
+      .word { font-family: 'Space Grotesk', 'Arial', sans-serif; font-weight: 700; }
+    </style>
+  </defs>
+
+  <g transform="translate(-28,-15)">
+    <path class="stroke" d="M 118 34 L 62 34 L 58 84" />
+    <path class="stroke" d="M 58 84 C 130 74 148 118 132 150 C 116 182 68 182 52 158" />
+    <circle class="dot" cx="98" cy="150" r="7.5" />
+    <path class="arc" d="M 84 136 A 22 22 0 0 1 116 136" />
+    <path class="arc" d="M 73 124 A 40 40 0 0 1 127 124" />
+  </g>
+
+  <text x="150" y="100" class="word" font-size="58" fill="#0B1F3A">uni<tspan fill="#00C9A7">5</tspan>solution</text>
+  <text x="151" y="128" font-family="'IBM Plex Mono', monospace" font-size="15" letter-spacing="4" fill="#5B6B82">ENTERPRISE WI-FI &amp; NETWORKS</text>
+</svg>
